@@ -1,6 +1,6 @@
 # OpenMW-Nix
 
-### How to use
+## Setup
 
 ```nix
 {
@@ -11,22 +11,18 @@
     };
   };
 
-  outputs = flakes @ {
+  outputs = inputs@{
     self,
     nixpkgs,
     openmw-nix,
     ...
   }: {
     nixosConfiguration.<your-hostname> = nixpkgs.lib.nixosSystem {
-      modules = [
-        ({ inputs, ... }: {
-          environment.systemPackages = with inputs.openmw-nix.packages.<your-system>; [
-            delta-plugin
-            openmw-nightly
-            openmw-validator
-            plox
-          ]
-        })
+      environment.systemPackages = with openmw-nix.packages.<your-system>; [
+        delta-plugin
+        openmw-nightly
+        openmw-validator
+        plox
       ];
     };
   };
