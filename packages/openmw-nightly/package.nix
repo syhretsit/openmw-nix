@@ -97,9 +97,6 @@ stdenv.mkDerivation {
 
     nativeBuildInputs = [ cmake pkg-config wrapQtAppsHook ];
 
-    # Improves performance
-    qtWrapperArgs = [ "--set OSG_VERTEX_BUFFER_HINT VERTEX_BUFFER_OBJECT" ];
-
     buildInputs = [
         SDL2
         boost
