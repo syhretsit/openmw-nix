@@ -1,6 +1,6 @@
 # OpenMW-Nix
 
-## Setup
+## Usage
 
 ```nix
 {
