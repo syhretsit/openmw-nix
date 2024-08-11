@@ -20,7 +20,7 @@
     nixosConfiguration.<your-hostname> = nixpkgs.lib.nixosSystem {
       environment.systemPackages = with openmw-nix.packages.<your-system>; [
         delta-plugin
-        openmw-nightly
+        openmw-dev
         openmw-validator
         plox
       ];

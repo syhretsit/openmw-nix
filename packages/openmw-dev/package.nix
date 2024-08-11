@@ -26,7 +26,7 @@
 }:
 
 let
-    GL = "GLVND"; # or "LEGACY";
+    GL = "GLVND";
 
     collada-dom = stdenv.mkDerivation {
         pname = "collada-dom";
@@ -87,13 +87,9 @@ stdenv.mkDerivation {
     src = fetchFromGitLab {
         owner = "OpenMW";
         repo = "openmw";
-        rev = "ec6f6e2c900f7aa6cf533b13d16735d21e4db487";
-        hash = "sha256-yQa0xYZwvDGQKJXRHiagmY1KMF4Z/56xxrepI/87LJo=";
+        rev = "9234b5707f9df8a75e86f3a7c3e6de9da4fb8f33";
+        hash = "sha256-P2vxRt4LP83H5yRt+JOv3U+WJJOHBqhmYil++VznhRg=";
     };
-
-    postPatch = ''
-        sed '1i#include <memory>' -i components/myguiplatform/myguidatamanager.cpp # gcc12
-    '';
 
     nativeBuildInputs = [ cmake pkg-config wrapQtAppsHook ];
 
