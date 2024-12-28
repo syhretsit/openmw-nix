@@ -5,6 +5,7 @@
   cmake,
   fetchFromGitHub,
   fetchFromGitLab,
+  fetchurl,
   ffmpeg,
   inputs,
   libxml2,
@@ -38,6 +39,13 @@ let
       rev = "c1e20b7d6ff806237030fe82f126cb86d661f063";
       sha256 = "A1ne/D6S0shwCzb9spd1MoSt/238HWA8dvgd+DC9cXc=";
     };
+
+    patches = [
+      (fetchurl {
+        url = "https://aur.archlinux.org/cgit/aur.git/plain/fix-compatibility-with-boost-1.85.patch?h=collada-dom";
+        hash = "sha256-z6sC8ASLRe6lkobR0FTbLl176upnXNKyITDKyVVxOVU=";
+      })
+    ];
 
     postInstall = ''
       chmod +w -R $out
