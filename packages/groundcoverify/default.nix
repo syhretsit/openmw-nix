@@ -16,7 +16,7 @@ pkgs.python3Packages.buildPythonApplication rec {
   };
 
   # External compiled dependencies
-  buildInputs = [ pkgs.custom.delta-plugin ];
+  buildInputs = [ pkgs.openmw-nix.delta-plugin ];
 
   # Python dependencies
   dependencies = [ pkgs.python3Packages.setuptools ];
