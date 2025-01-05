@@ -23,10 +23,15 @@
   wrapQtAppsHook,
   xorg,
   yaml-cpp,
+  lib,
+
+  tweakedWaterShader,
   ...
 }:
 
 let
+  inherit (lib) optionals;
+
   GL = "GLVND";
 
   collada-dom = stdenv.mkDerivation {
@@ -102,7 +107,7 @@ let
 in
 stdenv.mkDerivation {
   pname = "openmw";
-  version = "0.49.0";
+  version = "master";
 
   src = fetchFromGitLab {
     owner = "OpenMW";
@@ -110,6 +115,10 @@ stdenv.mkDerivation {
     rev = "63b8e636f391e80388a7d7a5077c16cf9847fd64";
     hash = "sha256-G3GF9pWL5II/ipmIhFLjXNjMHP/v0vqPU2iq1aq5+zo=";
   };
+
+  # Tweaks core water shader to work with Wareya's SSR post processing water shader
+  # https://github.com/wareya/OpenMW-Shaders?tab=readme-ov-file#using-the-water-shader
+  patches = optionals tweakedWaterShader [ ./tweaked_water_shader.patch ];
 
   nativeBuildInputs = [
     cmake

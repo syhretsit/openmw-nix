@@ -1,3 +1,11 @@
-{ qt6Packages, inputs, ... }:
+{
+  qt6Packages,
+  inputs,
+  tweakedWaterShader ? true,
+  ...
+}:
 
-qt6Packages.callPackage ./package.nix { inputs = inputs; }
+qt6Packages.callPackage ./package.nix {
+  inputs = inputs;
+  tweakedWaterShader = tweakedWaterShader;
+}
