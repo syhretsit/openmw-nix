@@ -17,6 +17,7 @@
 
       src = ./.;
 
-      snowfall.namespace = "custom";
+      # namespace is used when cross-referencing packages inside this flake
+      snowfall.namespace = "openmw-nix";
     };
 }
