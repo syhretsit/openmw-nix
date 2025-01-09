@@ -9,7 +9,7 @@ on:
 
 jobs:
   update-derivation:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest:docker
     steps:
       - name: Set up cache for Nix
         uses: actions/cache@v3
