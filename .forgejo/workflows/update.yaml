@@ -1,0 +1,40 @@
+name: Update Nix Derivation
+
+on:
+  schedule:
+    # Runs weekly at midnight every Sunday
+    - cron: "0 0 * * 0"
+  # Allow manual triggering
+  workflow_dispatch: {}
+
+jobs:
+  update-derivation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up cache for Nix
+        uses: actions/cache@v3
+        with:
+          path: /nix/store
+          key: ${{ runner.os }}-nix-store-${{ github.ref }}
+          restore-keys: |
+            ${{ runner.os }}-nix-store-
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Nix
+        run: curl -L https://nixos.org/nix/install | sh
+
+      - name: Update Nix derivation
+        run: |
+          nix-shell -p nix-update --run "nix-update <package-name>"
+          git add . && git commit -m "Update derivation for <package-name>"
+          git push origin HEAD:update-<package-name>
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: update-<package-name>
+          title: Update <package-name> derivation
+          body: |
+            This PR updates the `<package-name>` derivation to the latest version.
