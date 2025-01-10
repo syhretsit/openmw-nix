@@ -3,24 +3,18 @@ name: "Update Flake Packages ❄️"
 on:
     workflow_dispatch: {}
     schedule:
-        # Runs Sunday at midnight
+        # Runs every Sunday at midnight
         - cron: "0 0 * * 0"
 
 jobs:
     update-flake-packages:
         runs-on: "ubuntu-latest"
         steps:
-          # - name: "Set up cache for Nix"
-          #   uses: "actions/cache@v3"
-          #   with:
-          #       path: "/nix/store"
-          #       key: "${{ runner.os }}-nix-store-${{ github.ref }}"
-          #       restore-keys: "${{ runner.os }}-nix-store-"
           - name: "Checkout repository"
-            uses: "actions/checkout@v3"
+            uses: "https://code.forgejo.org/actions/checkout@v3"
           - name: "Install Nix"
             uses: "https://github.com/cachix/install-nix-action@v20"
           - name: "Update flake packages"
-            uses: "https://github.com/selfuryon/nix-update-action@v1.1.0"
+            uses: "https://github.com/poperigby/nix-update-action"
             with:
                 pr-assignees: "PopeRigby"
