@@ -10,12 +10,12 @@ jobs:
     update-flake-packages:
         runs-on: "ubuntu-latest:docker"
         steps:
-          - name: "Set up cache for Nix"
-            uses: "actions/cache@v3"
-            with:
-                path: "/nix/store"
-                key: "${{ runner.os }}-nix-store-${{ github.ref }}"
-                restore-keys: "${{ runner.os }}-nix-store-"
+          # - name: "Set up cache for Nix"
+          #   uses: "actions/cache@v3"
+          #   with:
+          #       path: "/nix/store"
+          #       key: "${{ runner.os }}-nix-store-${{ github.ref }}"
+          #       restore-keys: "${{ runner.os }}-nix-store-"
           - name: "Checkout repository"
             uses: "actions/checkout@v3"
           - name: "Install Nix"
