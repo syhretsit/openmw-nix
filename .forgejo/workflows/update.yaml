@@ -21,6 +21,6 @@ jobs:
           - name: "Install Nix"
             uses: "https://github.com/cachix/install-nix-action@v20"
           - name: "Update flake packages"
-            uses: "https://github.com/selfuryon/nix-update-action@v1"
+            uses: "https://github.com/selfuryon/nix-update-action@v1.1.0"
             with:
                 pr-assignees: "PopeRigby"
