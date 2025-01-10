@@ -8,7 +8,7 @@ on:
 
 jobs:
     update-flake-packages:
-        runs-on: "ubuntu-latest:docker"
+        runs-on: "ubuntu-latest"
         steps:
           # - name: "Set up cache for Nix"
           #   uses: "actions/cache@v3"
