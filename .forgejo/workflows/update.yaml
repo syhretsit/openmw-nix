@@ -15,6 +15,6 @@ jobs:
           - name: "Install Nix"
             uses: "PopeRigby/install-nix-action@v20"
           - name: "Update flake packages"
-            uses: "PopeRigby/nix-update-action@29ce2d"
+            uses: "PopeRigby/nix-update-action@9ce2dcf08755bf4af4390571ac53f5f7163ee36"
             with:
                 pr-assignees: "PopeRigby"
