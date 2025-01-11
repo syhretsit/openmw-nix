@@ -12,6 +12,8 @@ jobs:
         steps:
           - name: "Checkout repository"
             uses: "actions/checkout@v3"
+          - name: "Install NodeJS"
+            uses: "PopeRigby/setup-node@v4"
           - name: "Install Nix"
             uses: "PopeRigby/install-nix-action@v20"
           - name: "Update flake packages"
