@@ -112,8 +112,8 @@ stdenv.mkDerivation {
   src = fetchFromGitLab {
     owner = "OpenMW";
     repo = "openmw";
-    rev = "63b8e636f391e80388a7d7a5077c16cf9847fd64";
-    hash = "sha256-G3GF9pWL5II/ipmIhFLjXNjMHP/v0vqPU2iq1aq5+zo=";
+    rev = "763e88817a8f1ff1fc253e2243d316a153e3e0c5";
+    hash = "sha256-drobgxrsWPvFT3GOBX6m9PJNQKz1/E51bpVvKrOreLU=";
   };
 
   # Tweaks core water shader to work with Wareya's SSR post processing water shader
