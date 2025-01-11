@@ -1,9 +1,0 @@
-diff --git a/src/umo.py b/src/umo.py
-index 8f918dd..7fee34f 100644
---- a/src/umo.py
-+++ b/src/umo.py
-@@ -1,3 +1,4 @@
-+#!python
- # Copyright (C) 2024 Sebastian Fieber <fallchildren@disroot.org>
- #
- # This program is free software: you can redistribute it and/or modify
