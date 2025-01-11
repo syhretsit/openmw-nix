@@ -8,7 +8,7 @@ on:
 
 jobs:
     update-flake-packages:
-        runs-on: "debian-latest"
+        runs-on: "podman"
         steps:
           - name: "Checkout repository"
             uses: "actions/checkout@v3"
