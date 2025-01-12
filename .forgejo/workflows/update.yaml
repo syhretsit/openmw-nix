@@ -8,7 +8,7 @@ on:
 
 jobs:
     update-flake-packages:
-        runs-on: "nix"
+        runs-on: "haddock"
         steps:
           - name: "Checkout repository"
             uses: "actions/checkout@v3"
