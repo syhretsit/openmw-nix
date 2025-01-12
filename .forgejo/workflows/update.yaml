@@ -8,7 +8,7 @@ on:
 
 jobs:
     update-flake-packages:
-        runs-on: "podman"
+        runs-on: "nix"
         steps:
           - name: "Checkout repository"
             uses: "actions/checkout@v3"
