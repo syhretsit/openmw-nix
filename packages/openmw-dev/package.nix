@@ -87,8 +87,9 @@ stdenv.mkDerivation {
     src = fetchFromGitLab {
         owner = "OpenMW";
         repo = "openmw";
-        rev = "ec4384902081333e01bddac1d1d0a664e493f624";
-        hash = "sha256-w3CfOrjfavtGmIcNtLNXZauq6LQUiYKyQo5HrVsKg/4=";
+        rev = "c16064e6f304ee910e3ee949ced3f241a2e4f095";
+        # hash = "sha256-w3CfOrjfavtGmIcNtLNXZauq6LQUiYKyQo5HrVsKg/4=";
+        hash = "";
     };
 
     nativeBuildInputs = [ cmake pkg-config wrapQtAppsHook ];
