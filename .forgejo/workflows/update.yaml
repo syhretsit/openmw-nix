@@ -13,6 +13,7 @@ jobs:
           - name: "Checkout repository"
             uses: "actions/checkout@v3"
           - name: "Update flake packages"
-            uses: "PopeRigby/nix-update-action@303b1ca2e34d29bf0640bd2b94df93177ef2b275"
+            uses: "PopeRigby/nix-update-action@e748f32cb9d217855661b4c30f77e57c35724e80"
             with:
                 pr-assignees: "PopeRigby"
+                snowfall-lib: true
