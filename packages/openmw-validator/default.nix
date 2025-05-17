@@ -5,16 +5,16 @@
 
 pkgs.buildGoModule rec {
   pname = "openmw-validator";
-  version = "1.10";
+  version = "1.14";
 
   src = pkgs.fetchFromGitLab {
     owner = "modding-openmw";
     repo = pname;
     rev = version;
-    hash = "sha256-x59Wz8kzitYuCLIDh83B5WW4qCRvmR61eN9SFftH6bQ=";
+    hash = "sha256-uA6BZfbOIFg3mLQaTAQ7tx6J0L9x2CeTJwxZWWO/PIg=";
   };
 
   doCheck = false;
 
-  vendorHash = "sha256-v95YjYXE0X3WFJGP4bP6lT/j7b8FqXSJkN8jxUM5eMU=";
+  vendorHash = "sha256-x4n07zJj8M8mraMNMbtGwe/EBzzGVTcK7mrfi9KFips=";
 }
