@@ -7,13 +7,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "delta-plugin";
-  version = "0.22.0";
+  version = "0.22.3";
 
   src = fetchFromGitLab {
     owner = "bmwinger";
     repo = pname;
     rev = version;
-    hash = "sha256-XRsxe9N8GPaw7ykoI61pu//XnYGRRUN4KTxyJdyETYE=";
+    hash = "sha256-8wotQ+ByOo0y1AM1uym7kVt30q6c5JKy6JKCMDKpV/0=";
   };
 
   cargoLock = {
