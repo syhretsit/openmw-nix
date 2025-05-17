@@ -8,16 +8,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "plox";
-  version = "0.4.1";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "rfuzzo";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-XUOD6yzpkNIZHHv1GiGJdPFV2ehiwva+1tzMvPXprk4=";
+    hash = "sha256-9JkbeiaMJl1EIqz/YctfJkzcWm+701C/3E8Q/UHml8Y=";
   };
 
-  cargoHash = "sha256-lEyBb3sX/pTHOR/KAn/hEbq67OwXWFRhGm87nejI/JA=";
+  cargoHash = "sha256-cbMoJM3528guWLw2IPPfEYxRSF5Yg7bJ4nHB5yCjPDo=";
 
   nativeBuildInputs = [ pkgs.pkg-config ];
 
