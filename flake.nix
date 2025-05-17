@@ -2,6 +2,10 @@
   description = "A flake containing useful things for playing OpenMW";
 
   inputs = {
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     snowfall-lib = {
       url = "github:snowfallorg/lib";
@@ -17,7 +21,12 @@
 
       src = ./.;
 
-      # namespace is used when cross-referencing packages inside this flake
+      channels-config = {
+        allowUnfree = true;
+        overlays = [ inputs.fenix.overlays.default ];
+      };
+
+      # Namespace is used when cross-referencing packages inside this flake
       snowfall.namespace = "openmw-nix";
     };
 }
