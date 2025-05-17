@@ -107,7 +107,7 @@ let
 in
 stdenv.mkDerivation {
   pname = "openmw";
-  version = "master";
+  version = "unstable-2025-05-01";
 
   src = fetchFromGitLab {
     owner = "OpenMW";
