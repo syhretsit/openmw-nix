@@ -9,18 +9,12 @@
 
 stdenv.mkDerivation rec {
   pname = "groundcoverify";
-  version = "0.2.4";
+  version = "0.2.4-unstable-2025-05-17";
 
-  # src = fetchFromGitLab {
-  #   owner = "bmwinger";
-  #   repo = "groundcoverify";
-  #   rev = version;
-  #   hash = "sha256-mu/ZHoB+mnsuzk8TOJHbZSfowMPfg2c550OiSuWfb4Q=";
-  # };
   src = fetchFromGitLab {
-    owner = "PopeRigby";
+    owner = "bmwinger";
     repo = "groundcoverify";
-    rev = "f3414eb0d33accd21005007bb500306366850805";
+    rev = "1f9ae80a7d935400a2c46083f755261c7978bdb3";
     hash = "sha256-OXi5zxFa7QOAmhqS2dcfs2ROaw7KQH2DzkLZ/BBfd/w=";
   };
 

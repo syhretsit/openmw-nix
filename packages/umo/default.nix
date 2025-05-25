@@ -1,13 +1,18 @@
-{ python3Packages, fetchFromGitLab, lib, pkgs }:
+{
+  python3Packages,
+  fetchFromGitLab,
+  lib,
+  pkgs,
+}:
 python3Packages.buildPythonApplication rec {
   pname = "umo";
-  version = "0.9.4";
+  version = "0.9.5";
 
   src = fetchFromGitLab {
     owner = "modding-openmw";
     repo = "umo";
     rev = version;
-    sha256 = "sha256-lEkYSK07sAC9miXMJkaxXoBfW5+X/ztp5pT7o4Wo2lQ=";
+    sha256 = "sha256-DEq3aZmoLPW6dZ44yzgfM/awFWIbW2ajKWthTKhDz+E=";
   };
 
   pyproject = true;
@@ -16,19 +21,22 @@ python3Packages.buildPythonApplication rec {
     setuptools
   ];
   dependencies = with python3Packages; [
+    beautifulsoup4
+    certifi
+    click
     coloredlogs
     desktop-notifier
-    pkgs.openmw-nix.curldl
     pkgs.desktop-file-utils
+    pkgs.openmw-nix.curldl
+    platformdirs
+    pwinput
+    pycryptodomex
     pycurl
     pydantic
-    pycryptodomex
-    platformdirs
     rarfile
-    pwinput
+    toml
+    typer
     websockets
-    certifi
-    beautifulsoup4
   ];
 
   pythonRelaxDeps = true;
