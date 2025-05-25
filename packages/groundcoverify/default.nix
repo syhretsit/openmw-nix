@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation rec {
   pname = "groundcoverify";
-  version = "0.2.4";
+  version = "0.2.1";
 
   # src = fetchFromGitLab {
   #   owner = "bmwinger";
