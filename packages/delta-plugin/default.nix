@@ -7,16 +7,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "delta-plugin";
-  version = "0.22.3";
+  version = "0.23.0";
 
   src = fetchFromGitLab {
     owner = "bmwinger";
     repo = pname;
     rev = version;
-    hash = "sha256-8wotQ+ByOo0y1AM1uym7kVt30q6c5JKy6JKCMDKpV/0=";
+    hash = "sha256-DAgir+2T1vz9MmXsb20H2XgTxviOi3ZH0vNo53FfGUQ=";
   };
 
-  cargoHash = "sha256-dOZJsgtJYSr2QjQLBLao0JF7mniir9QRAxl3E5p6P6E=";
+  cargoHash = "sha256-CW3JJoaxuKHJscUdaAhZTKOxGKjp5w51h7/qxlAYWaQ=";
 
   meta = {
     description = "A tool for handling and converting markup-based versions of ESP files.";
