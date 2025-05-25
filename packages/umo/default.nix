@@ -1,4 +1,9 @@
-{ python3Packages, fetchFromGitLab, lib, pkgs }:
+{
+  python3Packages,
+  fetchFromGitLab,
+  lib,
+  pkgs,
+}:
 python3Packages.buildPythonApplication rec {
   pname = "umo";
   version = "0.9.5";
@@ -16,19 +21,22 @@ python3Packages.buildPythonApplication rec {
     setuptools
   ];
   dependencies = with python3Packages; [
+    beautifulsoup4
+    certifi
+    click
     coloredlogs
     desktop-notifier
-    pkgs.openmw-nix.curldl
     pkgs.desktop-file-utils
+    pkgs.openmw-nix.curldl
+    platformdirs
+    pwinput
+    pycryptodomex
     pycurl
     pydantic
-    pycryptodomex
-    platformdirs
     rarfile
-    pwinput
+    toml
+    typer
     websockets
-    certifi
-    beautifulsoup4
   ];
 
   pythonRelaxDeps = true;
