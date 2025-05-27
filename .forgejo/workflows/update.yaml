@@ -15,5 +15,4 @@ jobs:
           - name: "Update flake packages"
             uses: "PopeRigby/nix-update-action@b25c27d4f444788a8c8e31c0508d0006608e0c12"
             with:
-                pr-assignees: "PopeRigby"
                 snowfall-lib: true
