@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "momw-configurator";
-  version = "1.9";
+  version = "1.19";
 
   src = fetchFromGitLab {
     owner = "modding-openmw";
