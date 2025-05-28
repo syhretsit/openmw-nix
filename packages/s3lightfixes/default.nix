@@ -1,4 +1,8 @@
-{ lib, rustPlatform, fetchFromGitHub }:
+{
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+}:
 
 rustPlatform.buildRustPackage rec {
   pname = "s3lightfixes";
@@ -6,7 +10,7 @@ rustPlatform.buildRustPackage rec {
 
   src = fetchFromGitHub {
     owner = "magicaldave";
-    repo= "S3LightFixes";
+    repo = "S3LightFixes";
     rev = "c04e09868b2ffb0ce9f7efc6f306d630cf1e1537";
     hash = "sha256-C8LicGZQGdIzrihAwRwYJNCp73J+XXcyMtde3TgU9Sc=";
   };
@@ -17,11 +21,11 @@ rustPlatform.buildRustPackage rec {
   };
   cargoHash = "";
 
-  meta = with lib; {
+  meta = {
     homepage = "https://github.com/magicaldave/S3LightFixes";
-    license = licenses.mit;
+    license = lib.licenses.mit;
     description = "Make ESP files which adjust the lighting values from all mods listed in one's openmw.cfg.";
     mainProgram = "s3lightfixes";
-    maintainers = with maintainers; [ ZeroNationality ];
+    maintainers = [ ];
   };
 }
