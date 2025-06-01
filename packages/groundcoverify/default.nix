@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation rec {
   pname = "groundcoverify";
-  version = "0.2.4-unstable-2025-05-17";
+  version = "0.2.4-unstable-2025-05-31";
 
   src = fetchFromGitLab {
     owner = "bmwinger";
     repo = "groundcoverify";
-    rev = "1f9ae80a7d935400a2c46083f755261c7978bdb3";
-    hash = "sha256-OXi5zxFa7QOAmhqS2dcfs2ROaw7KQH2DzkLZ/BBfd/w=";
+    rev = "3e67c258f5d6991684c598b6afd063721be2fd9d";
+    hash = "sha256-9uJ/zxx+2nf+adOi+5Pa/DthTXMwYUpF6u1aDjhdZH8=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
