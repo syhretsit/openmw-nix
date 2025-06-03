@@ -1,0 +1,16 @@
+name: "Update flake.lock 🔒"
+
+on:
+    workflow_dispatch: {}
+    schedule:
+        # Runs every Sunday at midnight
+        - cron: "0 0 * * 0"
+
+jobs:
+    update-flake-packages:
+        runs-on: "haddock"
+        steps:
+          - name: "Checkout repository"
+            uses: "actions/checkout@v3"
+          - name: "Update flake.lock"
+            uses: "PopeRigby/update-flake-lock@83c490bb97b4734de34de20ddc39498733215ac7"
