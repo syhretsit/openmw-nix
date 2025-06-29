@@ -6,7 +6,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "s3lightfixes";
-  version = "0.3.3";
+  version = "0.4.1";
 
   src = fetchFromGitHub {
     owner = "magicaldave";
@@ -17,7 +17,10 @@ rustPlatform.buildRustPackage rec {
 
   cargoLock = {
     lockFile = ./Cargo.lock;
-    allowBuiltinFetchGit = true;
+    outputHashes = {
+      "bytes_io-0.0.1" = "sha256-SG47djSAxzSfxGsVnioRyYvaZtsFVR/zInADxsuXz+k=";
+      "openmw-cfg-0.5.2" = "sha256-kQBGA0mI8tnJ647G5yeC7xw1TEAFg/wY+R5HePB3BKw=";
+    };
   };
   cargoHash = "";
 
