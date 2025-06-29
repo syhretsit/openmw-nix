@@ -6,13 +6,13 @@
 }:
 python3Packages.buildPythonApplication rec {
   pname = "umo";
-  version = "0.9.5";
+  version = "0.10.9";
 
   src = fetchFromGitLab {
     owner = "modding-openmw";
     repo = "umo";
     rev = version;
-    sha256 = "sha256-DEq3aZmoLPW6dZ44yzgfM/awFWIbW2ajKWthTKhDz+E=";
+    sha256 = "sha256-2moBqM05hXlhe4XyvFeedCwW0b1VEcBP+Bcn2s+LENs=";
   };
 
   pyproject = true;
