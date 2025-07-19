@@ -6,7 +6,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "s3lightfixes";
-  version = "0.4.3";
+  version = "0.4.4";
 
   src = fetchFromGitHub {
     owner = "magicaldave";

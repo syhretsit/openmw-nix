@@ -116,13 +116,13 @@ qt6Packages.callPackage
     in
     stdenv.mkDerivation {
       pname = "openmw";
-      version = "openmw-0.49.0-unstable-2025-07-05";
+      version = "openmw-0.49.0-unstable-2025-07-12";
 
       src = fetchFromGitLab {
         owner = "OpenMW";
         repo = "openmw";
-        rev = "a51afbeaa8b0cb31587eef3f563efd96280f0a66";
-        hash = "sha256-8eTGq2PPT7peBF/eEAhKbuaHWKbv1so3PByQP2EpwmI=";
+        rev = "2504550c6f4d25c0cb7edb81daf558c416701cb5";
+        hash = "sha256-DBb476Vn1chYNdRvRBQxfUoD/pCYVK46uzT+Liv8v8Q=";
       };
 
       # Tweaks core water shader to work with Wareya's SSR post processing water shader
