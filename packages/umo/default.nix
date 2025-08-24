@@ -37,7 +37,10 @@ python3Packages.buildPythonApplication rec {
     toml
     typer
     websockets
+    pkgs.tes3cmd
+    pkgs.p7zip-rar
   ];
+
 
   pythonRelaxDeps = true;
 
