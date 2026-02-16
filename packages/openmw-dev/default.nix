@@ -1,7 +1,7 @@
 {
   lib,
   pkgs,
-  tweakedWaterShader ? true,
+  # tweakedWaterShader ? true,
   ...
 }:
 
@@ -13,10 +13,10 @@ pkgs.openmw.overrideAttrs (old: {
     owner = "OpenMW";
     repo = "openmw";
     rev = "a13f8f33942756403f81cfe1a9c170ad5af4134d";
-    hash = "";
+    hash = "sha256-kDPax0lMzbptflNf9Pn6S6sHJmgewpula16b7RyfXz4=";
   };
 
   # Tweaks core water shader to work with Wareya's SSR post processing water shader
   # https://github.com/wareya/OpenMW-Shaders?tab=readme-ov-file#using-the-water-shader
-  patches = lib.optionals tweakedWaterShader [ ./tweaked_water_shader.patch ];
+  # patches = lib.optionals tweakedWaterShader [ ./tweaked_water_shader.patch ]; # temporarly disabled
 })
