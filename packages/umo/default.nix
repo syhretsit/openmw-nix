@@ -12,8 +12,7 @@ python3Packages.buildPythonApplication rec {
     owner = "modding-openmw";
     repo = "umo";
     rev = version;
-    # sha256 = "sha256-2moBqM05hXlhe4XyvFeedCwW0b1VEcBP+Bcn2s+LENs=";
-    sha256 = "";
+    sha256 = "sha256-gb/mC+AksOyoWnpm0LIcTwSw6bXT2UnaU2XMIo4VtMA=";
   };
 
   pyproject = true;
