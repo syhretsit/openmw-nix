@@ -12,7 +12,7 @@ pkgs.openmw.overrideAttrs (old: {
   src = pkgs.fetchFromGitLab {
     owner = "OpenMW";
     repo = "openmw";
-    rev = "a13f8f33942756403f81cfe1a9c170ad5af4134d"
+    rev = "a13f8f33942756403f81cfe1a9c170ad5af4134d";
     hash = "";
   };
 
