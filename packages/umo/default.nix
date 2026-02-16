@@ -6,7 +6,7 @@
 }:
 python3Packages.buildPythonApplication rec {
   pname = "umo";
-  version = "0.11.0";
+  version = "0.11";
 
   src = fetchFromGitLab {
     owner = "modding-openmw";
