@@ -53,6 +53,10 @@ python3Packages.buildPythonApplication rec {
     versionCheckHook
   '';
 
+  postPatch = ''
+    sed -i 's|license = {text = "GNU AGPLv3"}|license = "GNU AGPLv3"|' pyproject.toml
+  '';
+
   meta = {
     description = "umo is an automatic modlist downloader for Modding-OpenMW.com";
     homepage = "https://gitlab.com/modding-openmw/umo";
