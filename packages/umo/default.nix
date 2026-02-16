@@ -56,6 +56,7 @@ python3Packages.buildPythonApplication rec {
   postPatch = ''
     # sed -i 's|license = {text = "GNU AGPLv3"}|license = "AGPLv3"|' pyproject.toml
     sed -i 's|"GNU AGPLv3"|"AGPL-3.0-only"|' pyproject.toml
+    sed -i '/license = {text = "AGPL-3.0-only"}/a license-files = [ "LICENSE", ]' pyproject.toml
     # sed -i '/license = "GNU AGPLv3"/a license-files = [ "LICENSE", ]' pyproject.toml
     # sed -i '/license = {text = "GNU AGPLv3"}/a license-files = [ "LICENSE", ]' pyproject.toml
   '';
