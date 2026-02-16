@@ -40,6 +40,12 @@ python3Packages.buildPythonApplication rec {
     websockets
     pkgs.tes3cmd
     pkgs.p7zip-rar
+    # 0.10.9 -> 0.11
+    questionary
+    xsdata
+    plyer
+    wand
+    dbus-python
   ];
 
 
