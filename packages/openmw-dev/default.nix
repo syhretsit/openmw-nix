@@ -12,8 +12,8 @@ pkgs.openmw.overrideAttrs (old: {
   src = pkgs.fetchFromGitLab {
     owner = "OpenMW";
     repo = "openmw";
-    rev = "757d791fe7ccdecea1aa03bdd6e5e4868b2780a5";
-    hash = "sha256-5zE+sFpILix7P7eqTaTcfcKOptr/N4SdQLQYrPHyf3s=";
+    rev = "6af8cdf6228415ca728e7c45648c5bba27da1190"
+    hash = "";
   };
 
   # Tweaks core water shader to work with Wareya's SSR post processing water shader
