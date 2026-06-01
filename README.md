@@ -1,4 +1,4 @@
-# OpenMW-Nix
+# [OpenMW-Nix Fork](https://codeberg.org/PopeRigby/openmw-nix)
 
 ## Usage
 
