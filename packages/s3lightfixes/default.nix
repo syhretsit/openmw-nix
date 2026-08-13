@@ -4,31 +4,24 @@
   fetchFromGitHub,
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "s3lightfixes";
-  version = "0.4.46";
+  version = "0.4.58";
 
   src = fetchFromGitHub {
-    owner = "magicaldave";
+    owner = "DreamWeave-MP";
     repo = "S3LightFixes";
-    rev = "c04e09868b2ffb0ce9f7efc6f306d630cf1e1537";
-    hash = "sha256-C8LicGZQGdIzrihAwRwYJNCp73J+XXcyMtde3TgU9Sc=";
+    tag = finalAttrs.version;
+    hash = "sha256-e/CeXOFVAJH7vazlflC68DrwKZQzl8UzklvYLplubbI=";
   };
 
-  cargoLock = {
-    lockFile = ./Cargo.lock;
-    outputHashes = {
-      "bytes_io-0.0.1" = "sha256-SG47djSAxzSfxGsVnioRyYvaZtsFVR/zInADxsuXz+k=";
-      "openmw-cfg-0.5.2" = "sha256-kQBGA0mI8tnJ647G5yeC7xw1TEAFg/wY+R5HePB3BKw=";
-    };
-  };
-  cargoHash = "";
+  cargoHash = "sha256-wjk41yowWpgRLyu84tjDvqqhtjsJvZdaZOYYdP04ZdE=";
 
   meta = {
-    homepage = "https://github.com/magicaldave/S3LightFixes";
-    license = lib.licenses.mit;
-    description = "Make ESP files which adjust the lighting values from all mods listed in one's openmw.cfg.";
+    description = "Generates and installs light fixing plugins for OpenMW";
+    homepage = "https://github.com/DreamWeave-MP/S3LightFixes";
+    license = lib.licenses.gpl3Only;
+    maintainers = with lib.maintainers; [ ];
     mainProgram = "s3lightfixes";
-    maintainers = [ ];
   };
-}
+})

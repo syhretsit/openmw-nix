@@ -4,15 +4,15 @@
   fetchFromGitLab,
 }:
 
-buildGoModule {
+buildGoModule rec {
   pname = "momw-configurator";
-  version = "1.23";
+  version = "1.25";
 
   src = fetchFromGitLab {
     owner = "modding-openmw";
     repo = "momw-configurator";
-    rev = "0f66c3bb2e491e1905a0f91dfe9a16e782ecf4d9";
-    hash = "sha256-ESaX3Zt4BempzsuPf0fttqj4aUNP/oJpSZyqWF0yPz0=";
+    rev = version;
+    hash = "sha256-whh7Da5Z40GfLYlxfdh0ZZOWnAgwPy0mvevUWshve64=";
   };
 
   vendorHash = "sha256-Pu16/2qZvAkLVb1D3uQt3XrcfBn9lBGY5UVjAGsLKag=";

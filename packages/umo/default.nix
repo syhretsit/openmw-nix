@@ -13,41 +13,40 @@ python3Packages.buildPythonApplication rec {
     repo = "umo";
     rev = version;
     sha256 = "sha256-gb/mC+AksOyoWnpm0LIcTwSw6bXT2UnaU2XMIo4VtMA=";
+    # sha256 = "sha256-4GrXTZ7Yu8WW0pd3aGzPqwiYYzNtBaZ2DeOiXecXjqA="; # 0.11.1
   };
 
   pyproject = true;
 
   build-system = with python3Packages; [
     setuptools
-    setuptools-scm 
+    setuptools-scm
   ];
   dependencies = with python3Packages; [
     beautifulsoup4
     certifi
     click
     coloredlogs
+    dbus-python
     desktop-notifier
     pkgs.desktop-file-utils
     pkgs.openmw-nix.curldl
     platformdirs
+    plyer
     pwinput
     pycryptodomex
     pycurl
     pydantic
+    questionary
     rarfile
     toml
     typer
+    wand
     websockets
+    xsdata
     pkgs.tes3cmd
     pkgs.p7zip-rar
-    # 0.10.9 -> 0.11
-    questionary
-    xsdata
-    plyer
-    wand
-    dbus-python
   ];
-
 
   pythonRelaxDeps = true;
 
