@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage rec {
       libxkbcommon
       openssl
     ])
-    ++ lib.optionals pkgs.stdenv.isDarwin (
+    ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin (
       with pkgs.darwin.apple_sdk.frameworks;
       [
         AppKit
@@ -35,7 +35,7 @@ rustPlatform.buildRustPackage rec {
         Security
       ]
     )
-    ++ lib.optionals stdenv.isLinux [
+    ++ lib.optionals stdenv.hostPlatform.isLinux [
       pkgs.wayland
     ];
 
